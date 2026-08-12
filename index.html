@@ -6,42 +6,41 @@
 <meta name="theme-color" content="#17365d">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="금속 CBT">
+<meta name="apple-mobile-web-app-title" content="금속 CBT v5">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png">
-<title>금속재료기사 CBT Pro v4</title>
+<title>금속재료기사 CBT Pro v5</title>
 <style>
-:root{--navy:#17365d;--blue:#305496;--bg:#f3f6fb;--card:#fff;--text:#172033;--muted:#6b7280;--line:#d8e0ec;--ok:#187a3d;--bad:#b42332;--soft:#edf2f8}
-*{box-sizing:border-box} html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
-button,select,input,textarea{font:inherit} button{touch-action:manipulation}
-header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;padding:12px 14px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,.12)}
-.brand{font-weight:800;font-size:18px}.sub{font-size:11px;opacity:.8;margin-top:2px}.timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:18px}
-main{max-width:1240px;margin:auto;padding:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 7px 24px rgba(27,54,93,.06)}
+:root{--navy:#17365d;--blue:#305496;--bg:#f3f6fb;--card:#fff;--text:#172033;--muted:#6b7280;--line:#d8e0ec;--ok:#187a3d;--bad:#b42332;--soft:#edf2f8;--amber:#9a6700}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}button,select,textarea{font:inherit}button{touch-action:manipulation;cursor:pointer}
+header{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff;padding:12px max(14px,env(safe-area-inset-right)) 12px max(14px,env(safe-area-inset-left));display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.brand{font-weight:800;font-size:18px}.sub{font-size:11px;opacity:.82;margin-top:2px}.timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:18px}
+main{max-width:1280px;margin:auto;padding:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 7px 24px rgba(27,54,93,.06)}
 .toolbar{padding:14px;margin-bottom:14px}.modebar{display:flex;gap:8px;overflow:auto;padding-bottom:8px}.modebar button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px}.modebar button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
-.filters{display:grid;grid-template-columns:1.2fr 1.2fr .8fr .8fr;gap:8px}select,.primary{border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:#fff;min-height:44px}.primary{background:var(--blue);color:#fff;border-color:var(--blue);font-weight:750}
-.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:10px}.kpi{background:var(--soft);border-radius:11px;padding:9px;text-align:center;font-size:11px;color:var(--muted)}.kpi b{display:block;font-size:18px;color:var(--text);margin-top:3px}
-.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px}.quiz{padding:18px}.qmeta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}.qtext{font-size:21px;font-weight:750;line-height:1.55;margin:14px 0 18px;white-space:pre-wrap}
+.filters{display:grid;grid-template-columns:1.1fr 1.1fr .8fr .7fr .75fr;gap:8px}select,.primary{border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:#fff;min-height:44px}.primary{background:var(--blue);color:#fff;border-color:var(--blue);font-weight:750}
+.kpis{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:10px}.kpi{background:var(--soft);border-radius:11px;padding:9px;text-align:center;font-size:11px;color:var(--muted)}.kpi b{display:block;font-size:18px;color:var(--text);margin-top:3px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:14px}.quiz{padding:18px}.qmeta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap}.tag{background:var(--soft);padding:4px 7px;border-radius:999px}.qtext{font-size:21px;font-weight:750;line-height:1.55;margin:14px 0 18px;white-space:pre-wrap}
 .choice{width:100%;text-align:left;border:1px solid var(--line);background:#fff;border-radius:12px;padding:14px;margin:9px 0;line-height:1.45}.choice.correct{border-color:#65a979;background:#eaf6ed}.choice.wrong{border-color:#d9858e;background:#fff0f1}.choice:disabled{color:inherit;opacity:1}
 .explain{margin-top:14px;padding:14px;border:1px solid var(--line);background:#f8fafc;border-radius:12px;line-height:1.55;white-space:pre-wrap}.actions{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-top:14px}.actions button{border:1px solid var(--line);border-radius:11px;padding:11px;background:#fff}.actions .next{background:var(--blue);color:white;border-color:var(--blue)}
 .side{padding:14px;align-self:start;position:sticky;top:76px;max-height:calc(100vh - 92px);overflow:auto}.side h3{margin:0 0 10px;font-size:16px}.palette{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.palette button{border:1px solid var(--line);border-radius:8px;padding:7px 0;background:#fff;font-size:12px}.palette button.current{outline:3px solid #8da4c4}.palette button.answered{background:#e9f4ed;border-color:#99c8a8}.palette button.wrong{background:#ffe7e9;border-color:#e6adb3}.palette button.review{box-shadow:inset 0 -4px #e4b03a}
-.sideSection{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}.progressRow{font-size:12px;margin:8px 0}.bar{height:8px;border-radius:999px;background:#e6ebf2;overflow:hidden}.bar>i{display:block;height:100%;background:var(--blue)}.note{width:100%;min-height:80px;border:1px solid var(--line);border-radius:10px;padding:10px}.notice{font-size:12px;color:var(--muted);line-height:1.5}
+.sideSection{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}.progressRow{font-size:12px;margin:8px 0}.bar{height:8px;border-radius:999px;background:#e6ebf2;overflow:hidden}.bar>i{display:block;height:100%;background:var(--blue)}.note{width:100%;min-height:80px;border:1px solid var(--line);border-radius:10px;padding:10px;resize:vertical}.notice{font-size:12px;color:var(--muted);line-height:1.5}.trust{color:var(--ok)}
 .result{padding:18px;margin-top:14px;display:none}.result.show{display:block}.resultGrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.resultBox{background:var(--soft);border-radius:10px;padding:10px;text-align:center}.pass{color:var(--ok)}.fail{color:var(--bad)}
-.install{position:fixed;right:14px;bottom:14px;z-index:40;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 10px 28px rgba(0,0,0,.13);max-width:310px;font-size:12px}.install button{float:right;border:0;background:transparent;font-size:18px}.hidden{display:none!important}
-@media(max-width:920px){.layout{grid-template-columns:1fr}.side{position:static;max-height:none;order:-1}.filters{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(3,1fr)}.palette{grid-template-columns:repeat(10,1fr)}}
+.install{position:fixed;right:14px;bottom:14px;z-index:40;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 10px 28px rgba(0,0,0,.13);max-width:310px;font-size:12px}.install button{float:right;border:0;background:transparent;font-size:18px}.hidden{display:none!important}.warn{color:var(--amber)}
+@media(max-width:940px){.layout{grid-template-columns:1fr}.side{position:static;max-height:none;order:-1}.filters{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(4,1fr)}.palette{grid-template-columns:repeat(10,1fr)}}
 @media(max-width:600px){main{padding:8px}.filters{grid-template-columns:1fr}.qtext{font-size:18px}.actions{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:repeat(2,1fr)}.palette{grid-template-columns:repeat(5,1fr)}}
 </style>
 </head>
 <body>
-<header><div><div class="brand">금속재료기사 CBT Pro v4</div><div class="sub">Safari / iPad / PC · Verified Core 2,000 + Virtual Variants 48,000</div></div><div class="timer" id="timer">00:00</div></header>
+<header><div><div class="brand">금속재료기사 CBT Pro v5</div><div class="sub" id="bankLabel">독립 문제은행 로딩 중…</div></div><div class="timer" id="timer">00:00</div></header>
 <main>
 <section class="card toolbar">
-<div class="modebar"><button data-mode="practice" class="active">과목별 학습</button><button data-mode="due">오늘 복습</button><button data-mode="wrong">오답노트</button><button data-mode="weak">취약문제</button><button data-mode="star">별표</button><button data-mode="exam">실전 100문제</button></div>
-<div class="filters"><select id="subject"></select><select id="topic"></select><select id="difficulty"><option value="">전체 난이도</option><option>하</option><option>중</option><option>상</option></select><button class="primary" id="startBtn">시작</button></div>
-<div class="kpis"><div class="kpi">누적 풀이<b id="kAttempts">0</b></div><div class="kpi">정답률<b id="kAccuracy">0%</b></div><div class="kpi">미해결 오답<b id="kWrong">0</b></div><div class="kpi">오늘 복습<b id="kDue">0</b></div><div class="kpi">별표<b id="kStar">0</b></div><div class="kpi">연속 학습일<b id="kStreak">0</b></div></div>
+<div class="modebar"><button data-mode="practice" class="active">과목별 학습</button><button data-mode="new">신규 우선</button><button data-mode="due">오늘 복습</button><button data-mode="wrong">오답노트</button><button data-mode="weak">취약문제</button><button data-mode="star">별표</button><button data-mode="exam">실전 100문제</button></div>
+<div class="filters"><select id="subject"></select><select id="topic"></select><select id="difficulty"><option value="">전체 난이도</option><option>하</option><option>중</option><option>상</option></select><select id="count"><option>20</option><option selected>50</option><option>100</option><option>200</option></select><button class="primary" id="startBtn">시작</button></div>
+<div class="kpis"><div class="kpi">문제은행<b id="kBank">0</b></div><div class="kpi">누적 풀이<b id="kAttempts">0</b></div><div class="kpi">정답률<b id="kAccuracy">0%</b></div><div class="kpi">미해결 오답<b id="kWrong">0</b></div><div class="kpi">오늘 복습<b id="kDue">0</b></div><div class="kpi">별표<b id="kStar">0</b></div><div class="kpi">연속 학습일<b id="kStreak">0</b></div></div>
 </section>
 <div class="layout">
 <section class="card quiz"><div class="qmeta" id="qmeta">문제은행 로드 중…</div><div class="qtext" id="qtext">잠시만 기다려 주세요.</div><div id="choices"></div><div id="explain" class="explain hidden"></div><div class="actions"><button id="prevBtn">← 이전</button><button id="reviewBtn">검토 표시</button><button id="starBtn">☆ 별표</button><button id="nextBtn" class="next">다음 →</button></div></section>
-<aside class="card side"><h3>답안판</h3><div id="palette" class="palette"></div><div class="sideSection"><h3>과목 진행</h3><div id="subjectProgress"></div></div><div class="sideSection"><h3>내 메모</h3><textarea id="note" class="note" placeholder="암기법/주의점"></textarea></div><div class="sideSection notice">오답·별표·메모·복습일은 이 기기의 Safari IndexedDB에 저장됩니다.</div></aside>
+<aside class="card side"><h3>답안판</h3><div id="palette" class="palette"></div><div class="sideSection"><h3>과목 진행</h3><div id="subjectProgress"></div></div><div class="sideSection"><h3>내 메모</h3><textarea id="note" class="note" placeholder="암기법/주의점"></textarea></div><div class="sideSection notice"><b>v5 중복 억제:</b> 같은 문제군(family)과 같은 세부영역이 연속 출제되지 않도록 세션을 구성합니다.<br><br>오답·별표·메모·복습일은 이 기기의 Safari IndexedDB에 저장됩니다.</div></aside>
 </div>
 <section id="result" class="card result"></section>
 </main>

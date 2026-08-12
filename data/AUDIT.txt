@@ -1,0 +1,6 @@
+TOTAL=10976
+SUBJECTS={"1장 금속조직학": 2634, "2장 금속재료학": 1515, "3장 금속가공학": 2759, "4장 재료시험": 3150, "5장 열처리": 918}
+TYPES={"core": 2000, "calculation": 8359, "concept-application": 28, "scenario": 233, "concept": 224, "concept-scenario": 132}
+UNIQUE_STEMS=10976
+DUP_STEMS=0
+TOPICS_COUNT=73

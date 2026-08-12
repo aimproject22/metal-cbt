@@ -1,22 +1,14 @@
 {
-  "name": "금속재료기사 CBT Pro v4",
-  "short_name": "금속 CBT",
-  "start_url": "./",
-  "scope": "./",
-  "display": "standalone",
-  "orientation": "any",
-  "background_color": "#f3f6fb",
-  "theme_color": "#17365d",
-  "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
+  "name":"금속재료기사 CBT Pro v5",
+  "short_name":"금속 CBT v5",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "orientation":"any",
+  "background_color":"#f3f6fb",
+  "theme_color":"#17365d",
+  "icons":[
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png"}
   ]
 }
