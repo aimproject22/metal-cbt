@@ -1,12 +1,10 @@
-v6.1 concept-only metallurgy expansion audit
-Total: 3052
-Subject3 metallurgy: 621
+CBT Pro v7 audit
+Total: 2005
 Calculation type: 0
-Normalized duplicate stems: 3
-
-Subject counts:
-- 1과목 금속재료학: 761
-- 2과목 금속조직학: 420
-- 3과목 야금공학: 621
-- 4과목 금속가공학: 662
-- 5과목 표면공학: 588
+Questions containing 세트: 0
+Normalized exact duplicate excess: 0
+1과목 금속재료학: 425
+2과목 금속조직학: 321
+3과목 야금공학: 621
+4과목 금속가공학: 402
+5과목 표면공학: 236
